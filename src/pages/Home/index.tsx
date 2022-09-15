@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import { List } from "../../components";
-import { User } from "../../types";
-import api from "../../services/api";
+import { Container, Row, Col } from "react-bootstrap";
+import { List } from "components";
+import { User } from "types";
+import api from "services/api";
+
+import styles from "./styles.module.css";
 
 const Home: React.FC = () => {
     const [userList, setUserList] = useState<User[] | null>(null);
@@ -20,11 +23,20 @@ const Home: React.FC = () => {
     }
 
     return (
-        <div>
-            {userList && (
-                <List data={userList} />
-            )}
-        </div>
+        <Container className={styles.container}>
+            <Row>
+                <Col>
+                    {userList && (
+                        <div className={styles.content}>
+                            <h1>List</h1>
+                            <p>Display a list of user fetched by randomuser.me</p>
+                            
+                            <List data={userList} />
+                        </div>
+                    )}
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

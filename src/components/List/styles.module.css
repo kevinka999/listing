@@ -1,0 +1,31 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image {
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.description > span:first-child {
+    font-weight: 700;
+}
+
+.action {
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.action > svg:hover, .action > svg:active {
+    color:#787878;
+}
