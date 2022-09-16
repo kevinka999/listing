@@ -7,3 +7,9 @@ After install, open a prompt window on the root folder from this project and run
 ```npm install```
 
 After all dependecies successfully installed type ```npm start``` to run the application in your local machine.
+
+## Unit test
+
+This project is using Jest and React Testing Library for testing.
+
+To display all testing coverage you need to open a prompt window on the root folder and type ```npm test```

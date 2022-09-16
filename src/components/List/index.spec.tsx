@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 import { mockUserList } from "services/mocks"
 import { List } from "components"
 
-describe("location modal component", () => {
-    it("should display the modal on screen when prop is true", () => {
+describe("list component", () => {
+    it("should display all the users on list", () => {
         const users = mockUserList.results
         render(<List data={users}/>)
 
