@@ -3,7 +3,6 @@
   "version": "1.0",
   "private": true,
   "dependencies": {
-    "@types/react-icons": "^3.0.0",
     "bootstrap": "^5.2.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
@@ -22,12 +21,16 @@
     "@types/react": "^18.0.20",
     "@types/react-bootstrap": "^0.32.30",
     "@types/react-dom": "^18.0.6",
+    "@types/react-icons": "^3.0.0",
     "@types/react-router-dom": "^5.3.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-environment-jsdom": "^29.0.3",
+    "ts-jest": "^29.0.1",
     "typescript": "^4.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "jest"
   },
   "browserslist": {
     "production": [
