@@ -1,3 +1,15 @@
+export interface ResponseUserList {
+	results: User[];
+	info: ResponseInfo; 
+}
+
+export interface ResponseInfo {
+    seed: string;
+    results: number;
+    page: number;
+    version: string;
+}
+
 export interface User {
 	gender: string;
 	name: Name;

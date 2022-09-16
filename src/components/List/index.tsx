@@ -23,7 +23,7 @@ const List: React.FC<IList> = ({ data }) => {
         <div>
             <ListGroup as="ol">
                 {data.map((user, idx) => (
-                    <ListGroup.Item as="li" key={idx}>
+                    <ListGroup.Item as="li" key={idx} role="listItem">
                         <div className={styles.item}>
                             <img className={styles.image} src={user.picture.thumbnail} />
 
