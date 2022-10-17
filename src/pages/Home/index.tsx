@@ -12,7 +12,12 @@ const Home: React.FC = () => {
     useEffect(() => fetchData(), [])
 
     function fetchData() {
-        api.get({url: "https://randomuser.me/api/?results=10"})
+        const controller = new AbortController();
+
+        api.get({
+            url: "https://randomuser.me/api/?results=10",
+            signal: controller.signal,
+        })
             .then((data: any) => {
                 const userList: User[] = data.results
                 setUserList(userList)
@@ -20,6 +25,10 @@ const Home: React.FC = () => {
             .catch(() => {
                 throw new Error("Something unexpected happened")
             })
+
+        return () => {
+            controller.abort();
+        }
     }
 
     return (
